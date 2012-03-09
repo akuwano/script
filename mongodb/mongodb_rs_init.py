@@ -36,7 +36,6 @@ for row in data:
     
     try:
         connection = Connection(str(server[0]), int(server[1]), slave_okay=True)
-        #connection = Connection('ec2-46-51-232-225.ap-northeast-1.compute.amazonaws.com', 27017)
     except Exception, e:
         print "Server Connection ERROR"
         print str(e)
