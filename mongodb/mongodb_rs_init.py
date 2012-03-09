@@ -50,14 +50,8 @@ for row in data:
     
     try:
         print config
-        #connection.admin.command("replSetInitiate",config)
+        connection.admin.command("replSetInitiate",config)
     except Exception, e:
         print str(e)
         print "replSetInitiate Error. RS:"  + row[3]
-    
-    try:
-        connection.admin.command("replSetGetStatus", 1)
-    except Exception, e:
-        print "replSetGetStatus Error"
-        print str(e)
     
