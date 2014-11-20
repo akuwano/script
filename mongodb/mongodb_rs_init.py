@@ -19,7 +19,6 @@ except Exception, e:
     print "CSV Input Error"
     print str(e)
 
-
 for row in data:
     try:
         server = row[0].split(':')
