@@ -6,10 +6,6 @@ from pymongo import ASCENDING, DESCENDING
 import sys
 import csv
 
-
-
-
-
 try:
     file = sys.argv 
     print "file"
@@ -33,13 +29,11 @@ for row in data:
     except Exception, e:
         print "Split ERROR"
         print str(e)
-    
     try:
         connection = Connection(str(server[0]), int(server[1]), slave_okay=True)
     except Exception, e:
         print "Server Connection ERROR"
         print str(e)
-    
     
     config = {
         "_id": row[3],
